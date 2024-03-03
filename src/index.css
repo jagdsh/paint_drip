@@ -11,3 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  flex-grow: 1;
+  height: 100%;
+}
+
+aside {
+  flex-basis: 196px;
+  background-color: #f1f1f1;
+  padding: 1.2em;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+aside > div:first-of-type {
+  flex-grow: 1;
+}
+
+main {
+  display: flex;
+}
+
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: #bbb;
+  height: 45px;
+}
+
+.btn--main {
+  background-color: hsl(211, 100%, 75%);
+  margin-bottom: 0.75rem;
+}
+
+.btn--block {
+  display: flex;
+  width: 100%;
+}
+
+.tool-section {
+  padding-bottom: 0.5rem;
+}
+
+.tool-section--lrg {
+  padding-bottom: 1rem;
+}
+
+.btn--active {
+  background-color: hsl(211, 100%, 70%);
+}
+
+.btn--dream-active {
+  background-image: repeating-conic-gradient(
+    hsl(0, 100%, 70%),
+    hsl(36, 100%, 70%),
+    hsl(108, 100%, 70%),
+    hsl(211, 100%, 70%),
+    hsl(247, 100%, 70%),
+    hsl(277, 100%, 70%),
+    hsl(320, 100%, 70%),
+    hsl(0, 100%, 70%)
+  );
+}
+
+.btn--eraser-active {
+  background-color: hsl(108, 100%, 70%);
+}
+
+.btn--width-active {
+  background-color: hsl(0, 100%, 70%);
+}
+
+*[disabled],
+*[disabled] + label {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
